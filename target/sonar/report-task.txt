@@ -1,0 +1,6 @@
+projectKey=com.capg.fda:OnlineFoodDelivery-Sprint1
+serverUrl=http://localhost:9000
+serverVersion=9.2.4.50792
+dashboardUrl=http://localhost:9000/dashboard?id=com.capg.fda%3AOnlineFoodDelivery-Sprint1
+ceTaskId=AX5UUC34ZZ-X1-LRsIul
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX5UUC34ZZ-X1-LRsIul

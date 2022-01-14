@@ -1,0 +1,104 @@
+ADD CUSTOMER
+Method-Post
+Url-http://localhost:8088/customer/insert
+Body-
+{
+    "customerName": "Tony"
+    "customerMobile": 15797566
+    "customerEmail": tonystark@gmail.com
+    "customerAddress": "toony"
+    "userName": "tonystark"
+    "password": "tonystark"
+}
+
+
+VIEW ALL CUSTOMER 
+Method-Get
+Url:http://localhost:8088/customer/retrieve
+
+{
+        "customerId": 1,
+        "customerName": "Sherlock Holmes",
+        "customerMobile": 895646548
+        "customerEmail": "sherlockholmes@gmail.com",
+        "customerAddress": "bakerStreet",
+        "userName": "sherlock221",
+        "password": "sherlock221"
+    },
+    {
+        "customerId": 2,
+        "customerName": "Elona",
+        "customerMobile": 899874561
+        "customerEmail": "elonaholmes@gmail.com",
+        "customerAddress": "rome",
+        "userName": "elona222",
+        "password": "elona222"
+    }
+    
+    {
+        "customerId": 2,
+        "customerName": "Elona",
+        "customerMobile": 899874561,
+        "customerEmail": "elonaholmes@gmail.com",
+        "customerAddress": "rome",
+        "userName": "elona222",
+        "password": "elona222"
+    },
+    {
+        "customerId": 8,
+        "customerName": "Jack Sparrow",
+        "customerMobile": 845644897,
+        "customerEmail": "jacksparrow@gmail.com",
+        "customerAddress": "carribien",
+        "userName": "jacksparrow",
+        "password": "jacksparrow"
+    },
+    {
+        "customerId": 9,
+        "customerName": "Will Smith",
+        "customerMobile": 98558871,
+        "customerEmail": "willsmith@gmail.com",
+        "customerAddress": "America",
+        "userName": "willsmith88",
+        "password": "willsmith123"
+    }
+]
+    
+EDIT CUSTOMER DETAILS(here edited the customerName)
+Method-Put
+Url:http://localhost:8088/customer/edit
+
+{
+        "customerId": 1,
+        "customerName": "Watson",
+        "customerMobile": 55878564,
+        "customerEmail": "watson@gmail.com",
+        "customerAddress": "UK",
+        "userName": "Watson222",
+        "password": "watson123"
+ },
+    
+    
+VIEW CUSTOMER BY ID
+Method:Get
+Url:http://localhost:8088/customer/viewonecustomer/1 
+
+{
+        "customerId": 1,
+        "customerName": "Watson",
+        "customerMobile": 55878564,
+        "customerEmail": "watson@gmail.com",
+        "customerAddress": "UK",
+        "userName": "Watson222",
+        "password": "watson2"
+        
+},
+
+DELETE CUSTOMER BY ID
+Method-Delete
+Url:http://localhost:8088/customer/DeleteCustomer/1   
+    
+ {
+    "data": "Deleted Customer Successfully!",
+    "status": 200
+}   

@@ -1,0 +1,193 @@
+Add Order Info
+METHOD-POST
+URL -  http://localhost:8088/orders/insertOrder/9/9(cartid/customerid)
+
+{
+    "data": {
+        "orderId": 14,
+        "finalPrice": 0.0,
+        "orderStatus": "Booked",
+        "customer": {
+            "customerId": 9,
+            "customerName": "John",
+            "customerMobile": 456654,
+            "customerEmail": "john@gmail.com",
+            "customerAddress": "Jetix",
+            "userName": "johndoe",
+            "password": "123john"
+        },
+        "cart": {
+            "cartId": 9,
+            "customer": {
+                "customerId": 9,
+                "customerName": "Mickey",
+                "customerMobile": 369852,
+                "customerEmail": "mickey@gmail.com",
+                "customerAddress": "USA",
+                "userName": "mickey",
+                "password": "mickey"
+            },
+            "total": 560.0,
+            "cartItem": [
+                {
+                    "itemId": 11,
+                    "food": {
+                        "foodId": 11,
+                        "foodType": "Nonveg",
+    "foodName": "Chiken Kabab",
+    "foodDescription": "Spicy",
+    "foodCost": 400,
+    "foodQuantity": 2
+                    },
+                    "quantity": 1,
+                    "customer": {
+                        "customerId": 9,
+                        "customerName": "Tom",
+            "customerMobile": 911911,
+            "customerEmail": "tom@gmail.com",
+            "customerAddress": "CN",
+            "userName": "tom321",
+            "password": "tom123"
+                    },
+                    "foodItem": null
+                }
+            ]
+        },
+        "orderDate": "2022-01-14"
+    },
+    "status": 200
+}
+
+VIEW ALL ORDER
+METHOD-GET
+URL-   http://localhost:9999/orders/viewAllOrder
+
+[
+    {
+        "orderId": 1,
+        "finalPrice": 100.0,
+        "orderStatus": "Booked",
+        "customer": {
+            "customerId": 8,
+            "customerName": "Tom",
+            "customerMobile": 911911,
+            "customerEmail": "tom@gmail.com",
+            "customerAddress": "CN",
+            "userName": "tom321",
+            "password": "tom123"
+        },
+        "cart": {
+            "cartId": 3,
+            "customer": {
+                "customerId": 9,
+                "customerName": "Jerry",
+                "customerMobile": 987789,
+                "customerEmail": "jerry@gmail.com",
+                "customerAddress": "CN",
+                "userName": "jerry45",
+                "password": "jerry"
+            },
+            "total": 700.0,
+            "cartItem": [
+                {
+                    "itemId": 12,
+                    "food": {
+                        "foodId": 11,
+                         "foodType": "veg",
+    "foodName": "Paneer Butter Masala",
+    "foodDescription": "Paneer Butter Masala Fry with roti",
+    "foodCost": 400,
+    "foodQuantity": 2
+                    },
+                    "quantity": 1,
+                    "customer": {
+                        "customerId": 9,
+                        "customerName": "bhavya",
+                        "customerMobile": 65996599,
+                        "customerEmail": "bhavya@gmail.com",
+                        "customerAddress": "sidhpur",
+                        "userName": "bhavya65",
+                        "password": "bhavya"
+                    },
+                    "foodItem": null
+                }
+            ]
+        },
+        "orderDate": "2022-01-14"
+    }
+]
+
+
+UpdateOrder
+METHOD-PUT
+URL-http://localhost:8088/orders/UpdateOrder
+
+
+
+
+ViewOrder
+METHOD-GET
+URL - http://localhost:8088/orders/viewOrderByOrderandCustomerId/8(customerId)
+
+{
+    "data": [
+        {
+            "orderId": 14,
+            "finalPrice": 700.0,
+            "orderStatus": "Booked",
+            "customer": {
+                "customerId": 8,
+                "customerName": "Amol",
+                "customerMobile": 2345679,
+                "customerEmail": "Amol@gmail.com",
+                "customerAddress": "Pune",
+                "userName": "Amol0302",
+                "password": "Amol123"
+            },
+            "cart": {
+                "cartId": 13,
+                "customer": {
+                    "customerId": 9,
+                    "customerName": "siddharth",
+                    "customerMobile": 2345659,
+                    "customerEmail": "siddharth@gmail.com",
+                    "customerAddress": "Pune",
+                    "userName": "siddharth0302",
+                    "password": "siddharth123"
+                },
+                "total": 700.0,
+                "cartItem": [
+                    {
+                        "itemId": 12,
+                        "food": {
+                            "foodId": 11,
+                            "foodType": "veg",
+                            "foodName": "veg tikka ",
+                            "foodDescription": "Veg tikka toppings with chapati",
+                            "foodCost": 700.0,
+                            "foodQuantity": 5
+                        },
+                        "quantity": 1,
+                        "customer": {
+                            "customerId": 9,
+                            "customerName": "siddharth",
+                            "customerMobile": 2345659,
+                            "customerEmail": "siddharth@gmail.com",
+                            "customerAddress": "Pune",
+                            "userName": "siddharth0302",
+                            "password": "siddharth123"
+                        },
+                        "foodItem": null
+                    }
+                ]
+            },
+            "orderDate": "2021-12-01"
+        }
+    ],
+    "status": 200
+}
+
+DeleteOrder
+METHOD-DELETE
+URL -  http://localhost:9999/orders/DeleteOrder/14
+Order Deleted Successfully

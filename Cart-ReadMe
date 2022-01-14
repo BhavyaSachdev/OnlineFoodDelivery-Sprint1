@@ -1,0 +1,192 @@
+createCart
+
+http://localhost:8088/cart/createCart/1
+
+{
+    "data": {
+        "cartId": 1,
+        "customer": {
+            "customerId": 5,
+            "customerName": "Bhavya",
+            "customerMobile": 2345659,
+            "customerEmail": "xyz@gmail.com",
+            "customerAddress": "Sidhpur",
+            "userName": "bhavya",
+            "password": "bhavya123"
+        },
+        "total": 500.0,
+        "cartItem": [
+            {
+                "itemId": 8,
+                "food": {
+                    "foodId": 9,
+                    "foodType": "veg",
+                    "foodName": "Noodles ",
+                    "foodDescription": "Noodles with Red Sauce",
+                    "foodCost": 70.0,
+                    "foodQuantity": 5
+                },
+                "quantity": 1,
+                "customer": {
+                    "customerId": 4,
+                    "customerName": "rahul",
+                    "customerMobile": 2345659,
+                    "customerEmail": "rahul@gmail.com",
+                    "customerAddress": "Pune",
+                    "userName": "rahul001",
+                    "password": "rahul123"
+                },
+                "foodItem": null
+            }
+        ]
+    },
+    "status": 200
+}
+
+
+
+ADD FOOD TO CARTITEM
+Method-POST
+URL-http://localhost:9999/cart/addItem
+
+{
+
+    "foodId": 2,
+    "foodItem": "Pasta",
+    "quantity": 1,
+    "customerId": 2
+    
+}
+
+
+
+ {
+        "itemId": 6,
+        "food": {
+            "foodId": 4,
+            "foodType": "Non-Veg",
+            "foodName": "Biryani ",
+            "foodDescription": "Chicken Biryani",
+            "foodCost": 300.0,
+            "foodQuantity": 2
+        },
+        "quantity": 1,
+        "customer": {
+            "customerId": 2,
+            "customerName": "Sonal",
+            "customerMobile": 5458522,
+            "customerEmail": "sonal@abc.com",
+            "customerAddress": "Pune",
+            "userName": "sonal99",
+            "password": "sonal99"
+        },
+        "foodItem": null
+    },
+    }
+    
+    
+    
+CREATE CART
+Method-POST
+URL-http://localhost:9999/cart/createCart/2
+
+{
+
+    "foodId": 9,
+    "foodItem": "Pani-Puri",
+    "quantity": 10,
+    "customerId": 2
+    
+}
+
+
+{
+    "data": {
+        "cartId": 7,
+        "customer": {
+            "customerId": 2,
+            "customerName": "Leena",
+            "customerMobile": 987456,
+            "customerEmail": "leena@capg.com",
+            "customerAddress": "AP",
+            "userName": "leena55",
+            "password": "leena123"
+        },
+        "total": 350.0,
+        "cartItem": [
+            {
+                "itemId": 7,
+                "food": {
+                    "foodId": 6,
+                    "foodType": "Veg",
+                    "foodName": "Veg Pulaav ",
+                    "foodDescription": "Vegetable Pulaav",
+                    "foodCost": 200.0,
+                    "foodQuantity": 5
+                },
+                "quantity": 1,
+                "customer": {
+                    "customerId": 2,
+                    "customerName": "Harshada",
+                    "customerMobile": 456123,
+                    "customerEmail": "Harshada@capg.com",
+                    "customerAddress": "Pune",
+                    "userName": "Her99",
+                    "password": "harsha88"
+                },
+                "foodItem": null
+            }
+        ]
+    },
+    "status": 200
+}
+
+
+
+UPDATE CART QUANTITY
+Method-PUT
+URL-http://localhost:8088/cart/updateCartQuantity/7/6/7
+
+{
+    "data": {
+        "itemId": 6,
+        "food": {
+            "foodId": 4,
+            "foodType": "Veg",
+            "foodName": "Shahi Paneer ",
+            "foodDescription": "Shahi Paneer with Naan",
+            "foodCost": 300.0,
+            "foodQuantity": 5
+        },
+        "quantity": 7,
+        "customer": {
+            "customerId": 7,
+            "customerName": "Rahul",
+            "customerMobile": 123456,
+            "customerEmail": "rahul@gmail.com",
+            "customerAddress": "Mumbai",
+            "userName": "rahul",
+            "password": "rahul111"
+        },
+        "foodItem": null
+    },
+    "status": 200
+}
+
+
+DELETE CARTITEM 
+Method-DELETE
+URL-http://localhost:8088/cart/deleteItemFromCart/2/6
+
+{
+    "data": "deleted",
+   
+}
+
+CLEAR CART
+Method-DELETE
+URL-http://localhost:8088/cart/clearCart/2
+
+{
+    "data": "Cart Deleted",
+}

@@ -1,0 +1,104 @@
+
+Method-POST
+URL-http://localhost:8088/food/add
+Body 1-{
+    "foodType": "veg",
+    "foodName": "Paneer Butter Masala",
+    "foodDescription": "Paneer Butter Masala Fry with roti",
+    "foodCost": 400,
+    "foodQuantity": 2
+}
+
+Body 2-{
+    "foodType": "Nonveg",
+    "foodName": "Chiken Kabab",
+    "foodDescription": "Spicy",
+    "foodCost": 400,
+    "foodQuantity": 2
+}
+
+
+
+DELETE Food
+Method-DELETE
+URL-http://localhost:8088/food/delete/1
+
+Deleted Food
+
+VIEW ALL food
+Method-GET
+URL-http://localhost:8088/food/viewAllFood
+
+{
+        "foodId": 4,
+        "foodType": "NonVeg",
+        "foodName": "Butter Chicken",
+        "foodDescription": "Butter Chicken with Roti",
+        "foodCost": 500.0,
+        "foodQuantity": 2
+    },
+    {
+        "foodId": 5,
+        "foodType": "Veg",
+        "foodName": "Pulav",
+        "foodDescription": "Vegetable Pulav",
+        "foodCost": 300.0,
+        "foodQuantity": 1
+    }
+
+VIEW Food BY ID
+Method-GET
+URL-http://localhost:8088/food/viewfood/5
+{
+        "foodId": 5,
+        "foodType": "Nonveg",
+        "foodName": "Hyderabadi Biriyani",
+        "foodDescription": "Hyderabadi Biriyani with soda",
+        "foodCost": 600.0,
+        "foodQuantity": 2
+    },
+
+
+UPDATE Food
+Method-PUT
+URL-http://localhost:8088/food/UpdateFood
+
+Updated
+
+VIEW ALL food
+Method-GET
+URL-http://localhost:8088/food/viewAllFood
+
+[
+    {  
+    	"foodId": 4,
+        "foodType": "NonVeg",
+        "foodName": "Butter Chicken",
+        "foodDescription": "Butter Chicken with Roti",
+        "foodCost": 500.0,
+        "foodQuantity": 2
+    },
+    {
+        "foodId": 5,
+        "foodType": "Nonveg",
+        "foodName": "Egg Biriyani",
+        "foodDescription": "Biriyani with soda",
+        "foodCost": 400.0,
+        "foodQuantity": 2
+    },
+    {    
+	    "foodType": "veg",
+	    "foodName": "Paneer Butter Masala",
+	    "foodDescription": "Paneer Butter Masala Fry with roti",
+	    "foodCost": 400,
+	    "foodQuantity": 2
+    },
+    {
+        "foodId": 11,
+        "foodType": "veg",
+        "foodName": "Panner Chilli",
+        "foodDescription": "Paneer chilli",
+        "foodCost": 600.0,
+        "foodQuantity": 4
+    }
+]
